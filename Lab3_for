@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <Windows.h>
+void main()
+{
+	for (int o = 5; o > 0; o--)
+	{
+		for (int f = o; f > 0; f--)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	system("pause");
+}
