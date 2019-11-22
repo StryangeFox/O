@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <Windows.h>
+
+void main() {
+
+int i=5, j=0;
+
+do {
+	do {
+		printf("*");
+		j++;
+	} while (j<i);
+	i--;
+	j=0;
+	printf("\n");
+} while (i>0);
+	
+	
+	system("pause");
+}
