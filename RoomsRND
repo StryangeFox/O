@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<locale>
+#include<time.h>
+void main()
+{
+	int max = 50, min = 1, flag = 0, num;
+	const int x = 2, y = 10;
+	char room[x][y];
+	srand((unsigned)time(0));
+	puts("Capacity of all rooms");
+	for (int i = 0; i < x; i++)
+		for (int j = 0; j < y; j++)
+			room[i][j] = (double)rand() / (RAND_MAX + 1) * (max - min) + min;
+	for (int j = 0; j < y; j++)
+		printf("The room №%i is designed for %i seats\n", room[0][j], room[1][j]);
+	puts("Enter the minimum required numbers of seats");
+	scanf_s("%i", &num);
+	for (int j = 0;j < y;j++)
+		if (room[1][j] >= num) {
+			flag = 1;
+			printf("The room №%i is designed for %i seats\n", room[0][j], room[1][j]);
+		}
+	if (flag == 0) {
+		puts("There are no rooms with so many seats\n");
+	}
+}
