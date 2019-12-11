@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+void main() {
+	int num;
+
+	printf("Enter a value:\n");
+	while (scanf_s("%i", &num) == 1) {
+		if (num == 0) break;
+		printf("You entered value %i\n", num);
+	}
+	printf("Enter a value:\n");
+	while (scanf_s("%i", &num) == 1 && num != 0) {
+		printf("You entered value %i\n", num);
+	}
+}
