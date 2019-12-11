@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int add(int a, int b) { return(a + b); }
+int add(int a, int b, int c) { return(a + b + c); }
+
+void main(void) {
+	printf("%i\n", add(12, 3, 51));
+	printf("%i\n", add(28, 38));
+}
