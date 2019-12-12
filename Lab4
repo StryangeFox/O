@@ -1,0 +1,42 @@
+#include <Windows.h>
+#include <math.h>
+#include <stdio.h>
+
+#define N 10
+
+void main() {
+
+	int sum = 0, zer = 0, z = 0, pos = 0, p = 0, neg = 0, n = 0;
+	int X[N] = { 1, 5, 0, 4, 0, 1, 1, 0, -3, -6 };
+
+	for (int f = 0; f < N; f++) {
+		sum = sum + X[f];
+	}
+	printf("The sum of the numbers: %i\n\n", sum);
+
+	for (int i = 0; i < N; i++) {
+		if (X[i] < 0)
+			n += 1;
+		if (X[i] == 0)
+			z += 1;
+		if (X[i] > 0)
+			p += 1;
+	}
+
+	neg = (100 / 10) * n;
+	printf("Percentage of negative numbers: %i%%\n", neg);
+	zer = (100 / 10) * z;
+	printf("Percentage of zero numbers: %i%%\n", zer);
+	pos = (100 / 10) * p;
+	printf("Percentage of positive numbers: %i%%\n", pos);
+	printf("\n");
+
+	if (pos > neg&& pos > zer)
+		printf("more positive numbers\n\n");
+	if (neg > pos&& neg > zer)
+		printf("more negative numbers\n\n");
+	if (zer > neg&& zer > pos)
+		printf("more zero numbers\n\n");
+
+	system("pause");
+}
