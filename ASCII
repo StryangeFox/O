@@ -5,5 +5,5 @@ void main() {
 //	setlocale(LC_ALL,"Rus");
 	for (int ch=0; ch<=255; ch++)
 		printf("ASCII value for %c - %i\n", ch, ch);
-	system("pause");
+	system("pause<<void");
 }
